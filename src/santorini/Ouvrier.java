@@ -14,10 +14,14 @@ public class Ouvrier {
     String joueur = new String();
     int numero;// chaque joueur possède 2 ouvriers
     
-    public Ouvrier(Joueur unJoueur, String uneCouleur, int unNumero){
-        joueur = unJoueur.couleur;
-        couleur = uneCouleur;
+    public Ouvrier(Joueur unJoueur, int unNumero){
+        joueur = unJoueur.nom;
+        couleur = unJoueur.couleur;
         numero = unNumero;
+    }
+    
+    public Ouvrier(){
+    
     }
     public String lireCouleur(){
         return couleur;
