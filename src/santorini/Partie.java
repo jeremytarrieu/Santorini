@@ -21,6 +21,61 @@ public class Partie {
         grilleJeu.viderGrille();
 
     }
+    public void AffecterCouleur(Joueur j1, Joueur j2){
+        //premier joueur
+        System.out.println(j1+" quel couleur veux tu jouer: "+j1.nom+"\n");
+        int x;
+        Scanner sc = new Scanner (System.in);
+        
+        System.out.println("1.rouge 2.jaune 3.bleu 4.marron");
+        x = sc.nextInt();
+        while (x!=0){
+            if(x==1){
+                j1.couleur="rouge";
+                x=0;
+            }else if(x==2){
+                j1.couleur="jaune";
+                x=0;
+
+            }else if(x==3){
+                j1.couleur="bleu";
+                x=0;
+
+            }else if(x==3){
+                j1.couleur="marron";
+                x=0;
+
+            }
+        }
+        //deuxieme joueur
+        int y;
+        Scanner sch = new Scanner (System.in);
+        System.out.println(j2+" quel couleur veux tu jouer: "+j2.nom+"\n");
+        System.out.println("1.rouge 2.jaune 3.bleu 4.marron");
+        y = sch.nextInt();
+        while (y!=0){
+            if(y==1){
+                j2.couleur="rouge";
+                y=0;
+            }else if(y==2){
+                j2.couleur="jaune";
+                y=0;
+
+            }else if(y==3){
+                j2.couleur="bleu";
+                y=0;
+
+            }else if(y==3){
+                j2.couleur="marron";
+                y=0;
+
+            }
+        }
+        listeJoueurs[0]=j1;//remplit le tableau de joueurs
+        listeJoueurs[1]=j2;
+        
+    }
+    
     public void debuterPartie(){
         //préparation de la partie
         initialiserPartie();
@@ -45,6 +100,8 @@ public class Partie {
         listeJoueurs[1] = Joueur2;
         System.out.println("Le Joueur2 s'appelle : "+Joueur2.nom+"\n");
         //on leur affecte une couleur
-        affecterCouleur
+        AffecterCouleur(Joueur1, Joueur2);
+        System.out.println("La couleur de "+Joueur1.nom+" est: " +Joueur1.couleur+"\n");
+        System.out.println("La couleur de "+Joueur2.nom+" est: " +Joueur2.couleur+"\n");
     }
 }
