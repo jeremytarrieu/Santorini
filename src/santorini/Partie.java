@@ -12,8 +12,11 @@ package santorini;
 public class Partie {
     Joueur listeJoueurs[] = new Joueur [2];
     Joueur joueurCourant;
-    Grille grille = new Grille();
+    Grille grilleJeu = new Grille();
     
 
-    
+    public Grille initialiserPartie(){
+        grilleJeu.viderGrille();
+
+    }
 }
