@@ -53,4 +53,8 @@ public class Cellule {
         return "vide";}
         return ouvrierCourant.couleur;
     }
+    public void viderCellule(){
+        ouvrierCourant = null;
+        construction = 0;
+    }
 }

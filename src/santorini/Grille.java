@@ -92,4 +92,12 @@ public class Grille {
             }
         }return false;
     }
+    
+    public void viderGrille(){
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
+                cellule[i][j].viderCellule();
+            }
+        }
+    }
 }
