@@ -26,7 +26,8 @@ public class Santorini {
             }//System.out.println(y);
         }//System.out.print("0\t1\t2\t3\t4");
         
-        
+        Partie PartieJeu = new Partie();
+        PartieJeu.debuterPartie();
     }
     
 }
